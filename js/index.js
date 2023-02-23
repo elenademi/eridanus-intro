@@ -24,3 +24,30 @@ skill.innerText=skills[i];
 //hint: appendChild method
 skillsList.appendChild(skill);
 }
+const messageForm=document.getElementById("leave_message");
+messageForm.addEventListener('submit',  (event)=> {
+    event.preventDefault();
+    const nameValue=event.target.name.value;
+    const emailValue=event.target.email.value;
+    const messageValue=event.target.message.value;
+    console.log(nameValue);
+    console.log(emailValue);
+    console.log(messageValue);
+    const messageSection=document.getElementById("messages");
+    const messageList= messageSection.querySelectorAll("ul");
+    const newMessage=document.createElement('li');
+    newMessage.innerHTML=`<a href="mailto:${emailValue}">${nameValue}</a> <span> ${messageValue} </span>`;
+    //newMessage.innerHTML=('<a href="mailto:emailValue">${nameValue}</a>');
+    console.log(newMessage)
+    messageForm.reset()
+}
+            
+)
+//Using "DOM Selection", select the #messages section by id and store it in a variable named messageSection
+//Using "DOM Selection", query the messageSection (instead of the entire document) 
+//to find the <ul> element and store it in a variable named messageList
+//Create a new list item (li) element and store it in a variable named newMessage
+//On the next line, set the inner HTML of your newMessage element with the following information:
+//<a> element that displays the "name" and links to the "email" (hint: use the mailto: prefix)
+//<span> element that displays the "message"
+//"< a href="mailto:john@example.com">John< /a>"
