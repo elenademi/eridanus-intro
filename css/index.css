@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(243, 250, 215);
+    color: rgb(3, 47, 3);
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    padding:1.5em;
+} 
+h2{
+        font-weight: 600;
+        color: rgb(142, 255, 127);
+}
+h3{
+    font-weight: 500;
+    font-size: medium;
+    color: rgb(42, 111, 39);
+}
+.styled-blocks{
+    padding: 1em;
+    background-color: rgb(252, 253, 236);
+    list-style-type: none;
+}
+.skills{
+    padding:1em;
+    background-color: rgb(240, 240, 187);
+}
+.label{
+    font-size: medium;
+    color: darkgoldenrod;
+
+}
+.message{
+    padding: 1 em;
+    background-color:rgb(252, 253, 236) ;
+    border-radius: 2% ;
+    border-color: darkgoldenrod;
+    font-family: inherit;
+}
+.user-input{
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+.submit{
+    font-family: inherit;
+    color:darkgoldenrod;
+    background-color: white;
+    padding: 1 em;
+    border-style: none;
+    
+}
+footer{
+    background-color: rgb(252, 253, 236);
+    color:darkgoldenrod;
+    padding:1.5em;
+    margin:0;
+    text-align: center;
+}
+.styled-messages{
+    padding:1 em;
+    background-color:rgb(252, 253, 236) ;
+}
+.remove-button{
+    font-family: inherit;
+    color:darkgoldenrod;
+    background-color: white;
+    padding: 1 em;
+    border-style: solid;
+    border-color: rgb(237, 182, 16);
+
+}
