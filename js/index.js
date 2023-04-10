@@ -76,7 +76,7 @@ for (let i = 0; i < repositories.length; i++) {
     projectList.appendChild(projects);
     const projectLink=document.createElement("a");
     projectLink.innerText=repositories[i].name;
-    projectLink.href=repositories[i].htm_url;
+    projectLink.href=repositories[i].html_url;
     projectLink.target="_blank";
     projects.appendChild(projectLink);
     const projectDescription=document.createElement('p');
