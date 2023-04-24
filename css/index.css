@@ -6,6 +6,7 @@ body{
 section{
     padding:1.5em;
 }
+
 .experience{
     display: flex;
     flex-direction: column;
@@ -13,11 +14,11 @@ section{
 
 }
 .experience-column{
-    background: rgb(252, 253, 236);
+    background: rgb(251, 245, 237);
     border:solid;
-    border-width: 3px;
+    border-width: 2px;
     border-color: rgb(42, 111, 39);
-    border-radius: 3px;
+    border-radius: 5px;
     margin-right: 1%;
     margin-bottom: 1%;
     padding:1em;
@@ -25,16 +26,33 @@ section{
 }
 header{
     display: flex;
-    height:20vh;
-    background-image: -webkit-linear-gradient(rgb(246, 205, 129),rgb(213, 238, 122));
+     flex-direction:column;
+     align-items: center;
+     
+    background-image: -webkit-linear-gradient(rgb(242, 211, 171),rgb(213, 238, 122));
+    
 
  }
  img{
-    padding: 1em;
-
+    padding:1em;
+    max-height: 40%;
+    max-width: 40%;
+    object-fit: cover;
+    
+   
+    
  }
+ 
+ 
+ .name{
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(85, 160, 9);
+ }
+ 
  nav li {
-    margin-left: 3em;
+    
     font-weight: 700;
     font-size: 1rem;
     text-transform: lowercase;
@@ -55,41 +73,78 @@ h3{
 }
 .styled-blocks{
     padding: 1em;
-    background-color: rgb(252, 253, 236);
+    background-color: rgb(251, 245, 237);
     list-style-type: none;
 }
 #skills{ 
-    padding: 1.5em;
+    padding-left:0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 .skills{
     padding:1em;
-    background-color: rgb(252, 253, 236);
+    background-color: rgb(251, 245, 237); 
     list-style-type: none;
     
 
 }
 
-.projects{
-    list-style-type: none;
-    background-color: rgb(252, 253, 236);
+#projects{
+    padding-left:0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    
 }
 
+.projects{
+    list-style-type: none;
+    background-color: rgb(251, 245, 237);
+    padding:1em;
+}
+
+.sectionConnect{
+    padding-left:0;
+    padding-right:0;
+}
+.connect{
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 245, 237); 
+    
+
+}
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
     margin-left: 2%;
+    background-color: rgb(251, 245, 237); 
+
+    
+    
 }
+
+#leave_message{
+
+    background-color: rgb(251, 245, 237);  
+    padding:1em;
+}
+
+
 .label{
     font-size: medium;
-    color: darkgoldenrod;
+    color: rgb(138, 101, 7);
 
 }
 .message{
     padding: 1 em;
-    background-color:rgb(252, 253, 236) ;
+    
     border-radius: 2% ;
     border-color: darkgoldenrod;
     font-family: inherit;
@@ -98,33 +153,50 @@ h3{
 .user-input{
     font-family: inherit;
     margin-bottom: 10px;
+    border-style: solid;
+    border-color: darkgoldenrod;
+    border-width: 1px;
+    border-radius: 3px;
 }
 .submit{
     font-family: inherit;
-    color:darkgoldenrod;
+    color: rgb(138, 101, 7);
     background-color: white;
     padding: 1 em;
-    border-style: none;
+    border-style: solid;
+    border-color: darkgoldenrod;
+    border-width: 1px;
+    border-radius: 3px;
 
 }
 footer{
-    background-color: rgb(252, 253, 236);
+    background-image: -webkit-linear-gradient(rgb(242, 211, 171),rgb(213, 238, 122));
     color:darkgoldenrod;
     padding:1.5em;
     margin:0;
     text-align: center;
 }
-.styled-messages{
-    padding:1 em;
-    background-color:rgb(252, 253, 236) ;
+#messages{
+    display:flex;
+    flex-direction: column;
+        padding:1em;
 }
-.remove-button{
+li{
+    padding: 0.5em;
+}
+.styled-messages{
+    padding:1.5em;
+    background-color:rgb(252, 253, 236) ;
+    list-style: none;
+}
+button{
     font-family: inherit;
     color:darkgoldenrod;
     background-color: white;
     padding: 1 em;
     border-style: solid;
-    border-color: rgb(255, 255, 255);
+    border-color: darkgoldenrod;
+    border-radius: 4px;
 
 }
 nav ul {
@@ -132,7 +204,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    
 }
 
  a{
@@ -146,6 +218,12 @@ nav ul {
     header{flex-direction: row;
         height:25vh;
     }
+
+    img{
+        padding: 1em;
+        max-height: 80%;
+        max-width: 80%;
+        object-fit: cover;}
 nav ul{
 
     list-style: none;
@@ -156,10 +234,15 @@ nav ul{
     align-items: center;}
     nav li{
 
-            margin-left: 5em;
-            margin-top: 2em;
+            margin-left: 2em;
+            
             font-size: 1.35rem;
     }
+    .name{
+        margin-left: 5rem;
+        margin-bottom: 0;
+
+     }
     .experience{
         flex-direction:row;
     }
@@ -184,5 +267,6 @@ nav ul{
         align-items: center;}
 nav li{
     font-size: 1em;
+    margin-left: 3em;
 }
  }
