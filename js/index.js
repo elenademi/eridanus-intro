@@ -39,13 +39,9 @@ messageForm.addEventListener('submit',  (event)=> {
     newMessage.innerHTML=`<a href="mailto:${emailValue}">${nameValue}</a> <span> ${messageValue} </span>`;
     //newMessage.innerHTML=('<a href="mailto:emailValue">${nameValue}</a>');
     console.log(newMessage)
-    console.log("cat")
     messageForm.reset()
     const removeButton=document.createElement('button');
     removeButton.innerText='remove';
-
-    removeButton.classList.add("remove-button")
-
     console.log(removeButton);
     removeButton.type="button";
     removeButton.addEventListener('click',  (remove)=>{
@@ -57,7 +53,6 @@ messageForm.addEventListener('submit',  (event)=> {
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 })
-
 //const githubRequest= new XMLHttpRequest();
 //githubRequest.open('GET', 'https://api.github.com/users/elenademi/repos');
 //githubRequest.send();
@@ -100,52 +95,14 @@ messageForm.addEventListener('submit',  (event)=> {
     const projectLink=document.createElement("a");
     projectLink.innerText=repositories[i].name;
    projectLink.href=repositories[i].html_url;
-
-const githubRequest= new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/elenademi/repos');
-githubRequest.send();
-//githubRequest.onload= function() {
-    //const repositories=JSON.parse(this.responseText);
-    //console.log(repositories);
-  
-//};
-//console.log(repositories);
-   
-githubRequest.addEventListener('load', function() {
-    let repositories=JSON.parse(this.responseText)
-    console.log(repositories); 
-    const projectSection=document.getElementById("projects");
-const projectList= projectSection.querySelector('ul');
-for (let i = 0; i < repositories.length; i++) {
-    const projects= document.createElement('li');
-    //projects.innerText=repositories[i].name;
-    projectList.appendChild(projects);
-    const projectLink=document.createElement("a");
-    projectLink.innerText=repositories[i].name;
-    projectLink.href=repositories[i].html_url;
-
     projectLink.target="_blank";
     projects.appendChild(projectLink);
     const projectDescription=document.createElement('p');
     projectDescription.innerText=repositories[i].description;
     projects.appendChild(projectDescription);
   }
-
     
   });
    
-//const projectSection=document.getElementById("projects");
-//const projectList= projectSection.querySelector('ul');
 
-     } 
- );
-
-    
-//const projectSection=document.getElementById("projects");
-//const projectList= projectSection.querySelector('ul');
-//for (let i = 0; i < repositories.length; i++) {
-   // const projects= document.createElement('li');
-   // projects.innerText=repositories[i].name;
-   // projectList.appendChild(project);
-  //}
 
