@@ -58,6 +58,49 @@ messageForm.addEventListener('submit',  (event)=> {
     messageList.appendChild(newMessage);
 })
 
+//const githubRequest= new XMLHttpRequest();
+//githubRequest.open('GET', 'https://api.github.com/users/elenademi/repos');
+//githubRequest.send();
+//githubRequest.onload= function() {
+    //const repositories=JSON.parse(this.responseText);
+    //console.log(repositories);
+ 
+//};
+//console.log(repositories);
+ //AJAX   
+//githubRequest.addEventListener('load', function() {
+    //let repositories=JSON.parse(this.responseText)
+    //console.log(repositories);
+   // const projectSection=document.getElementById("projects");
+//const projectList= projectSection.querySelector('ul');
+//for (let i = 0; i < repositories.length; i++) {
+    //const projects= document.createElement('li');
+    //projects.innerText=repositories[i].name;
+   // projectList.appendChild(projects);
+   // const projectLink=document.createElement("a");
+   // projectLink.innerText=repositories[i].name;
+   // projectLink.href=repositories[i].html_url;
+    //projectLink.target="_blank";
+    //projects.appendChild(projectLink);
+    //const projectDescription=document.createElement('p');
+    //projectDescription.innerText=repositories[i].description;
+   // projects.appendChild(projectDescription);
+  //}
+    // }
+// );
+ fetch('https://api.github.com/users/elenademi/repos')
+.then( response=>response.json())  
+ .then(repositories=> {
+    const projectSection=document.getElementById("projects");
+    const projectList= projectSection.querySelector('ul');
+    for (let i = 0; i < repositories.length; i++) {
+    const projects= document.createElement('li');
+   // projects.innerText=repositories[i].name;
+    projectList.appendChild(projects);
+    const projectLink=document.createElement("a");
+    projectLink.innerText=repositories[i].name;
+   projectLink.href=repositories[i].html_url;
+
 const githubRequest= new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/elenademi/repos');
 githubRequest.send();
@@ -80,12 +123,20 @@ for (let i = 0; i < repositories.length; i++) {
     const projectLink=document.createElement("a");
     projectLink.innerText=repositories[i].name;
     projectLink.href=repositories[i].html_url;
+
     projectLink.target="_blank";
     projects.appendChild(projectLink);
     const projectDescription=document.createElement('p');
     projectDescription.innerText=repositories[i].description;
     projects.appendChild(projectDescription);
   }
+
+    
+  });
+   
+//const projectSection=document.getElementById("projects");
+//const projectList= projectSection.querySelector('ul');
+
      } 
  );
 
@@ -97,3 +148,4 @@ for (let i = 0; i < repositories.length; i++) {
    // projects.innerText=repositories[i].name;
    // projectList.appendChild(project);
   //}
+
